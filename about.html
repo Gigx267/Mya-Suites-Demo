@@ -9,7 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
     <style>
         :root { --accent: #d4af37; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #0c0c0c; color: #fff; margin: 0; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background: #0c0c0c; 
+            color: #fff; 
+            margin: 0; 
+            overflow-x: hidden;
+        }
         .serif { font-family: 'Cormorant Garamond', serif; }
         
         .glass-panel {
@@ -24,23 +30,43 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        /* Mobile Menu Transitions */
+        .menu-line { transition: all 0.3s ease; transform-origin: center; }
+        #mobileMenu.active { transform: translateX(0); }
     </style>
 </head>
 <body>
 
-    <nav class="w-full flex justify-between items-center px-6 md:px-12 py-8 z-50 absolute top-0">
+    <nav class="w-full flex justify-between items-center px-6 md:px-12 py-8 z-[110] absolute top-0 left-0">
         <div class="text-lg tracking-[0.25em] font-light">MYA HOMES <span class="text-[#d4af37] font-bold">S</span></div>
+        
         <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] opacity-60">
             <a href="index.html" class="hover:text-[#d4af37] transition">Home</a>
             <a href="Propeties.html" class="hover:text-[#d4af37] transition">Properties</a>
             <a href="Contact.html" class="hover:text-[#d4af37] transition">Contact</a>
         </div>
-        <a href="tel:+2349019238653" class="text-[10px] border border-white/30 px-5 py-2 rounded-full uppercase tracking-widest hover:bg-white hover:text-black transition">
+
+        <a href="tel:+2349019238653" class="hidden md:block text-[10px] border border-white/30 px-5 py-2 rounded-full uppercase tracking-widest hover:bg-white hover:text-black transition">
             Message Us
         </a>
+
+        <button id="menuBtn" class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus:outline-none">
+            <span id="line1" class="menu-line w-6 h-[1px] bg-white"></span>
+            <span id="line2" class="menu-line w-6 h-[1px] bg-white"></span>
+            <span id="line3" class="menu-line w-6 h-[1px] bg-white"></span>
+        </button>
     </nav>
 
-    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+    <div id="mobileMenu" class="fixed inset-0 bg-black/95 backdrop-blur-2xl z-[105] flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-500 md:hidden">
+        <a href="index.html" class="serif text-4xl hover:text-gold transition-colors">Home</a>
+        <a href="Propeties.html" class="serif text-4xl hover:text-gold transition-colors">Properties</a>
+        <a href="Contact.html" class="serif text-4xl hover:text-gold transition-colors">Contact</a>
+        <div class="w-12 h-[1px] bg-[#d4af37]/30 my-4"></div>
+        <a href="tel:+2349019238653" class="bg-[#d4af37] text-black px-10 py-4 rounded-full text-[10px] uppercase tracking-widest font-bold">Message Us</a>
+    </div>
+
+    <main class="pt-48 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
         
         <header class="mb-16">
             <p class="text-[10px] uppercase tracking-[0.5em] mb-4 text-[#d4af37]">Our Story</p>
@@ -96,6 +122,48 @@
     <footer class="py-12 px-6 border-t border-white/5 opacity-40 text-center">
         <p class="text-[10px] tracking-[0.3em]">© 2026 MYA HOMES & SUITES LIMITED</p>
     </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+        let menuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.classList.add('active');
+                mobileMenu.style.transform = 'translateX(0)';
+                // Morph to X
+                line1.style.transform = 'translateY(7px) rotate(45deg)';
+                line2.style.opacity = '0';
+                line3.style.transform = 'translateY(-7px) rotate(-45deg)';
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.remove('active');
+                mobileMenu.style.transform = 'translateX(100%)';
+                // Reset to hamburger
+                line1.style.transform = 'none';
+                line2.style.opacity = '1';
+                line3.style.transform = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                mobileMenu.style.transform = 'translateX(100%)';
+                line1.style.transform = 'none';
+                line2.style.opacity = '1';
+                line3.style.transform = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
 
 </body>
 </html>
