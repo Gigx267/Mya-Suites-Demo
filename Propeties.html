@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties — Mya Homes & Suites | Abuja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --accent: #d4af37; 
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-hover: rgba(255, 255, 255, 0.07);
+            --border: rgba(255, 255, 255, 0.08);
+        }
+        * { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #0c0c0c 100%);
+            color: #fff; 
+            margin: 0; 
+            overflow-x: hidden;
+        }
+        .serif { font-family: 'Cormorant Garamond', serif; letter-spacing: -0.02em; }
+        .glass-panel {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .glass-panel:hover {
+            background: var(--glass-hover);
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-5px);
+        }
+        .text-gold { color: var(--accent); }
+        .bg-gold { background-color: var(--accent); }
+        .border-gold-dim { border-color: rgba(212, 175, 55, 0.2); }
+        .hover-gold-text:hover { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <!-- floating concierge (same as home) -->
+    <div class="fixed bottom-8 right-8 z-[100] hidden md:block">
+        <a href="https://wa.me/2349019238653" class="glass-panel px-6 py-4 rounded-full flex items-center gap-4 border-[#d4af37]/20 hover:border-[#d4af37]/60 group">
+            <div class="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
+            <span class="text-[10px] uppercase tracking-[0.3em] font-semibold">Live Concierge</span>
+        </a>
+    </div>
+
+    <!-- navigation identical to home (links point to same pages, but properties is current) -->
+    <nav class="w-full flex justify-between items-center px-6 md:px-12 py-10 z-50 absolute top-0 left-0">
+        <div class="text-sm md:text-lg tracking-[0.4em] font-light uppercase">Mya Homes & Suites Limited
+  <span class="text-gold font-bold"></span></div>
+        <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.4em] opacity-70">
+            <a href="index.html" class="hover:text-gold transition-colors">Home </a>
+            <a href="#" class="text-gold opacity-100">Properties</a>
+            <a href="about.html" class="hover:text-gold transition-colors">Our Story</a>
+            <a href="Contact.html" class="hover:text-gold transition-colors">Reservations</a>
+        </div>
+        <a href="Contact.html" class="text-[10px] border border-white/20 px-6 py-3 rounded-full uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+            Book A Stay
+        </a>
+    </nav>
+
+    <!-- spacer for fixed nav -->
+    <div class="h-32"></div>
+
+    <!-- PROPERTIES PAGE SPECIFIC CONTENT -->
+    <main class="px-6 md:px-12 max-w-7xl mx-auto">
+
+        <!-- intro block -->
+        <div class="mb-20 md:mb-28">
+            <p class="text-gold text-[10px] tracking-[0.5em] uppercase mb-4">— our portfolio</p>
+            <h1 class="serif text-6xl md:text-8xl leading-[0.9] mb-8">The <span class="opacity-40">residences</span></h1>
+            <div class="grid md:grid-cols-3 gap-8 text-white/40 text-sm font-light border-t border-white/10 pt-10">
+                <div>Each property is a carefully considered space — minimalist architecture, warm textures, and the privacy you expect from Mya Homes.</div>
+                <div>All residences feature: 24h electricity · high‑speed fibre · dedicated house staff · smart entry.</div>
+                <div class="text-gold text-[11px] tracking-widest uppercase">Guzape · Karasana · Gwarimpa</div>
+            </div>
+        </div>
+
+        <!-- TERRACE TOWNHOUSE (full width feature, similar to home's first property but detailed) -->
+        <div class="glass-panel rounded-[3rem] overflow-hidden mb-12 group">
+            <div class="grid md:grid-cols-2">
+                <!-- left image side -->
+                <div class="h-[400px] md:h-full relative overflow-hidden">
+                    <img src="https://i.pinimg.com/1200x/95/da/d7/95dad7d0ee05cf5246119a331a644d5d.jpg" 
+                         alt="Terrace Townhouse exterior" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent md:bg-gradient-to-r md:from-black/80 md:via-transparent md:to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 md:top-6 md:bottom-auto md:left-6">
+                        <span class="bg-gold text-black text-[9px] px-4 py-1.5 rounded-full uppercase font-bold tracking-widest">featured</span>
+                    </div>
+                </div>
+                <!-- right content -->
+                <div class="p-8 md:p-12 flex flex-col justify-center">
+                    <span class="text-[9px] uppercase tracking-[0.4em] text-gold mb-3">Guzape District — 31 Euphrates Street</span>
+                    <h2 class="serif text-4xl md:text-5xl mb-4">Terrace Townhouse</h2>
+                    <p class="text-white/50 text-sm leading-relaxed mb-6 max-w-lg">Three‑storey contemporary townhouses with private roof terrace. Open‑plan living, four en‑suite bedrooms, and a dedicated workspace. Ideal for extended families or corporate delegations.</p>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="text-[9px] border border-white/10 px-4 py-2 rounded-full">4 ensuite bedrooms</span>
+                        <span class="text-[9px] border border-white/10 px-4 py-2 rounded-full">roof terrace</span>
+                        <span class="text-[9px] border border-white/10 px-4 py-2 rounded-full">private entrance</span>
+                        <span class="text-[9px] border border-white/10 px-4 py-2 rounded-full">backup generator</span>
+                    </div>
+                    <div class="flex items-center justify-between border-t border-white/10 pt-6">
+                        <span class="text-2xl font-light">₦380k<span class="text-xs text-white/30 ml-1">/ night</span></span>
+                        <a href="Contact.html" class="border border-white/20 px-8 py-3 rounded-full text-[10px] uppercase tracking-widest hover:bg-gold hover:text-black hover:border-gold transition-all">inquire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GWARIMPA EXTENSION + KARASANA side by side -->
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <!-- left: Gwarimpa extension (detached) -->
+            <div class="glass-panel rounded-[2.5rem] p-8 group hover:border-gold/40">
+                <div class="h-64 rounded-2xl overflow-hidden mb-6">
+                    <img src="https://celestesuites.com.ng/yt%20(1).jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <span class="text-[9px] uppercase tracking-[0.3em] text-gold">Gwarimpa — Karasana District</span>
+                <h3 class="serif text-3xl md:text-4xl my-3">The Extension<br>Detached House</h3>
+                <p class="text-white/40 text-sm mb-5">Fully detached 4‑bedroom residence with private garden, carport for two vehicles, and staff quarters. Located on a quiet, secure lane.</p>
+                <div class="flex gap-2 flex-wrap mb-6">
+                    <span class="text-[8px] border border-white/10 px-3 py-1.5 rounded-full">private garden</span>
+                    <span class="text-[8px] border border-white/10 px-3 py-1.5 rounded-full">staff quarters</span>
+                    <span class="text-[8px] border border-white/10 px-3 py-1.5 rounded-full">carport</span>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-white/10">
+                    <span class="text-xl">₦420k<span class="text-xs text-white/30">/ night</span></span>
+                    <a href="Contact.html" class="text-[10px] uppercase tracking-widest hover:text-gold transition-colors">request →</a>
+                </div>
+            </div>
+
+            <!-- right: Karasana townhouse (similar style) -->
+            <div class="glass-panel rounded-[2.5rem] p-8 group hover:border-gold/40">
+                <div class="h-64 rounded-2xl overflow-hidden mb-6">
+                    <img src="fg (4).jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <span class="text-[9px] uppercase tracking-[0.3em] text-gold">Karasana — Gwarimpa II</span>
+                <h3 class="serif text-3xl md:text-4xl my-3">The Creekside<br>3‑Bed Duplex</h3>
+                <p class="text-white/40 text-sm mb-5">Semi‑detached duplex with a private courtyard, modern kitchen, and direct access to the neighbourhood walking trail. Bright interiors.</p>
+                <div class="flex gap-2 flex-wrap mb-6">
+                    <span class="text-[8px] border border-white/10 px-3 py-1.5 rounded-full">courtyard</span>
+                    <span class="text-[8px] border border-white/10 px-3 py-1.5 rounded-full">walk-in closet</span>
+                    <span class="text-[8px] border border-white/10 px-3 py-1.5 rounded-full">study</span>
+                </div>
+                <div class="flex items-center justify-between pt-4 border-t border-white/10">
+                    <span class="text-xl">₦290k<span class="text-xs text-white/30">/ night</span></span>
+                    <a href="Contact.html" class="text-[10px] uppercase tracking-widest hover:text-gold transition-colors">request →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CELESTE SUITES – large card with suites grid (reminiscent of home's bottom panel) -->
+        <div class="glass-panel rounded-[3rem] p-8 md:p-12 mb-20">
+            <div class="flex flex-col lg:flex-row gap-10">
+                <div class="lg:w-2/5">
+                    <span class="text-gold text-[10px] tracking-[0.5em] uppercase">Guzape boutique</span>
+                    <h2 class="serif text-4xl md:text-5xl my-4">Celeste Suites</h2>
+                    <p class="text-white/50 text-sm leading-relaxed mb-6">House 15, 14 Road — a collection of six individually designed studios and one‑bedroom suites. Each features a kitchenette, smart TV, and access to the Celeste bar & guest lounge.</p>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="bg-gold/20 text-gold text-[9px] px-4 py-2 rounded-full">in‑house bar</span>
+                        <span class="bg-gold/20 text-gold text-[9px] px-4 py-2 rounded-full">lounge</span>
+                        <span class="bg-gold/20 text-gold text-[9px] px-4 py-2 rounded-full">daily housekeeping</span>
+                    </div>
+                    <div class="border-t border-white/10 pt-6">
+                        <span class="text-sm text-white/40 block mb-2">rates from</span>
+                        <span class="text-3xl font-light">₦150k<span class="text-xs text-white/30 ml-1">/ night</span></span>
+                    </div>
+                </div>
+                <div class="lg:w-3/5 grid grid-cols-2 gap-4">
+                    <img src="https://celestesuites.com.ng/rty%20(15).jpg" class="rounded-2xl h-40 md:h-48 w-full object-cover glass-panel p-1">
+                    <img src="https://celestesuites.com.ng/k%20(2).jpg" class="rounded-2xl h-40 md:h-48 w-full object-cover glass-panel p-1">
+                    <img src="fg (3).jpg" class="rounded-2xl h-40 md:h-48 w-full object-cover glass-panel p-1 col-span-2 md:col-span-1">
+                    <img src="https://i.pinimg.com/1200x/95/da/d7/95dad7d0ee05cf5246119a331a644d5d.jpg" class="rounded-2xl h-40 md:h-48 w-full object-cover glass-panel p-1 hidden md:block">
+                </div>
+            </div>
+        </div>
+
+        <!-- quick comparison / amenities summary (glass list) -->
+        <div class="grid md:grid-cols-4 gap-4 mb-32">
+            <div class="glass-panel rounded-2xl p-6 text-center">
+                <span class="text-gold serif text-3xl block">24/7</span>
+                <span class="text-[9px] uppercase tracking-widest opacity-40">electricity</span>
+            </div>
+            <div class="glass-panel rounded-2xl p-6 text-center">
+                <span class="text-gold serif text-3xl block">WiFi</span>
+                <span class="text-[9px] uppercase tracking-widest opacity-40">fibre optic</span>
+            </div>
+            <div class="glass-panel rounded-2xl p-6 text-center">
+                <span class="text-gold serif text-3xl block">+234</span>
+                <span class="text-[9px] uppercase tracking-widest opacity-40">dedicated host</span>
+            </div>
+            <div class="glass-panel rounded-2xl p-6 text-center">
+                <span class="text-gold serif text-3xl block">←</span>
+                <span class="text-[9px] uppercase tracking-widest opacity-40">smart entry</span>
+            </div>
+        </div>
+
+        <!-- subtle CTA: view all / contact (direct line) -->
+        <div class="max-w-3xl mx-auto text-center mb-32">
+            <p class="text-[10px] uppercase tracking-[0.4em] text-gold mb-4">in-person viewing</p>
+            <h3 class="serif text-4xl md:text-5xl mb-8">Not ready to book?<br>Visit any property with our concierge.</h3>
+            <a href="tel:+2349019238653" class="inline-block border border-white/20 px-12 py-4 rounded-full text-sm tracking-widest uppercase hover:bg-gold hover:text-black hover:border-gold transition-all">
+                +234 901 923 8653
+            </a>
+            <p class="text-white/30 text-[9px] uppercase tracking-[0.3em] mt-8">24h notice appreciated</p>
+        </div>
+
+    </main>
+
+    <!-- footer identical to home (only year adjusted) -->
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-[9px] uppercase tracking-[0.5em] opacity-20">Mya Homes & Suites Limited © 2026 · Abuja, Nigeria</p>
+    </footer>
+
+    <!-- scroll reveal (same as home) -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('.serif', { delay: 200, distance: '30px', origin: 'bottom', duration: 800 });
+        ScrollReveal().reveal('.glass-panel', { delay: 200, distance: '40px', origin: 'bottom', duration: 900, interval: 80 });
+    </script>
+</body>
+</html>

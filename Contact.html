@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Mya Homes & Suites | Abuja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --accent: #d4af37; 
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-hover: rgba(255, 255, 255, 0.07);
+            --border: rgba(255, 255, 255, 0.08);
+        }
+        * { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #0c0c0c 100%);
+            color: #fff; 
+            margin: 0; 
+            overflow-x: hidden;
+        }
+        .serif { font-family: 'Cormorant Garamond', serif; letter-spacing: -0.02em; }
+        .glass-panel {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .glass-panel:hover {
+            background: var(--glass-hover);
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-5px);
+        }
+        .text-gold { color: var(--accent); }
+        .bg-gold { background-color: var(--accent); }
+        .border-gold-dim { border-color: rgba(212, 175, 55, 0.2); }
+        input, textarea {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 1rem 0;
+            font-size: 1rem;
+            width: 100%;
+            transition: border 0.3s;
+            color: white;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-bottom-color: var(--accent);
+        }
+        label {
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            opacity: 0.5;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .submit-btn {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 1rem 2.5rem;
+            border-radius: 3rem;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            cursor: pointer;
+            transition: all 0.4s;
+            color: white;
+        }
+        .submit-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- floating concierge (same as all pages) -->
+    <div class="fixed bottom-8 right-8 z-[100] hidden md:block">
+        <a href="https://wa.me/2349019238653" class="glass-panel px-6 py-4 rounded-full flex items-center gap-4 border-[#d4af37]/20 hover:border-[#d4af37]/60 group">
+            <div class="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
+            <span class="text-[10px] uppercase tracking-[0.3em] font-semibold">Live Concierge</span>
+        </a>
+    </div>
+
+    <!-- navigation (active: Reservations) -->
+    <nav class="w-full flex justify-between items-center px-6 md:px-12 py-10 z-50 absolute top-0 left-0">
+        <div class="text-sm md:text-lg tracking-[0.4em] font-light uppercase">Mya Homes <span class="text-gold font-bold"></span></div>
+        <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.4em] opacity-70">
+                 <a href="index.html" class="hover:text-gold transition-colors">Home </a>
+            <a href="Propeties.html" class="hover:text-gold transition-colors">Properties</a>
+            <a href="about.html" class="hover:text-gold transition-colors">Our Story</a>
+            <a href="#" class="text-gold opacity-100">Reservations</a>
+        </div>
+        <a href="Contact.html" class="text-[10px] border border-white/20 px-6 py-3 rounded-full uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+            Book A Stay
+        </a>
+    </nav>
+
+    <!-- spacer -->
+    <div class="h-32"></div>
+
+    <!-- MAIN CONTACT SECTION -->
+    <main class="px-6 md:px-12 max-w-7xl mx-auto mb-32">
+
+        <!-- intro -->
+        <div class="mb-20 max-w-3xl">
+            <p class="text-gold text-[10px] tracking-[0.5em] uppercase mb-4">— reach us</p>
+            <h1 class="serif text-6xl md:text-8xl leading-[0.9] mb-8">Make <span class="opacity-40">contact.</span></h1>
+            <p class="text-white/40 text-sm md:text-base font-light leading-relaxed">Whether for a reservation, a special request, or simply to learn more about our residences — our team is always available.</p>
+        </div>
+
+        <!-- two column: contact details + form -->
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+
+            <!-- left: direct contact & addresses (glass panels) -->
+            <div class="space-y-6">
+                <!-- phone cards (similar to home page) -->
+                <a href="tel:+2349019238653" class="glass-panel p-8 rounded-3xl block hover:bg-gold hover:text-black transition-all group">
+                    <span class="text-[9px] uppercase tracking-widest opacity-40 block mb-2 group-hover:text-black">Nigeria (direct line)</span>
+                    <span class="text-2xl md:text-3xl font-light tracking-tight">+234 901 923 8653</span>
+                </a>
+                <a href="tel:+447535776917" class="glass-panel p-8 rounded-3xl block hover:bg-white hover:text-black transition-all group">
+                    <span class="text-[9px] uppercase tracking-widest opacity-40 block mb-2 group-hover:text-black">International (UK)</span>
+                    <span class="text-2xl md:text-3xl font-light tracking-tight">+44 7535 776917</span>
+                </a>
+                
+                <!-- email & social -->
+                <div class="glass-panel rounded-3xl p-8">
+                    <div class="mb-6">
+                        <span class="text-[9px] uppercase tracking-widest opacity-40 block mb-2">Email</span>
+                        <span class="text-lg font-light tracking-tight">reservations@myahomes.ng</span>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-[9px] uppercase tracking-widest opacity-40 block mb-2">Concierge</span>
+                        <span class="text-lg font-light tracking-tight">concierge@myahomes.ng</span>
+                    </div>
+                    <div class="flex gap-6 pt-4 border-t border-white/10">
+                        <span class="text-[10px] uppercase tracking-widest opacity-30 hover:opacity-100 hover:text-gold cursor-pointer transition">Instagram</span>
+                        <span class="text-[10px] uppercase tracking-widest opacity-30 hover:opacity-100 hover:text-gold cursor-pointer transition">WhatsApp</span>
+                        <span class="text-[10px] uppercase tracking-widest opacity-30 hover:opacity-100 hover:text-gold cursor-pointer transition">LinkedIn</span>
+                    </div>
+                </div>
+
+                <!-- addresses (3 districts) -->
+                <div class="glass-panel rounded-3xl p-8">
+                    <span class="text-[9px] uppercase tracking-widest opacity-40 block mb-4">our locations</span>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm font-light text-gold">Guzape — Terrace Townhouse</p>
+                            <p class="text-xs opacity-40">31 Euphrates Street, Guzape, Abuja</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-light text-gold">Gwarimpa — Karasana Extension</p>
+                            <p class="text-xs opacity-40">22 Karasana Close, Gwarimpa, Abuja</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-light text-gold">Guzape — Celeste Suites</p>
+                            <p class="text-xs opacity-40">House 15, 14 Road, Guzape, Abuja</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- tiny map hint (decorative) -->
+                <div class="glass-panel rounded-3xl p-6 flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-gold">⌂</div>
+                    <span class="text-[10px] uppercase tracking-widest opacity-60">All districts · Abuja, FCT</span>
+                </div>
+            </div>
+
+            <!-- right: reservation form / inquiry -->
+            <div class="glass-panel rounded-[3rem] p-8 md:p-12">
+                <span class="text-[10px] uppercase tracking-[0.4em] text-gold">Send inquiry</span>
+                <h2 class="serif text-3xl md:text-4xl my-4">Request a stay or viewing</h2>
+                <p class="text-white/40 text-xs mb-8">We typically respond within 2 hours during business days.</p>
+
+                <form action="#" method="post" class="space-y-8">
+                    <div>
+                        <label>Full name</label>
+                        <input type="text" placeholder="e.g. Amara Okafor" class="placeholder:text-white/20">
+                    </div>
+                    <div>
+                        <label>Email address</label>
+                        <input type="email" placeholder="amara@example.com" class="placeholder:text-white/20">
+                    </div>
+                    <div>
+                        <label>Phone / WhatsApp</label>
+                        <input type="tel" placeholder="+234 ..." class="placeholder:text-white/20">
+                    </div>
+                    <div>
+                        <label>Property of interest (optional)</label>
+                        <select class="w-full bg-transparent border-b border-white/10 py-4 text-white/70 text-sm">
+                            <option value="" disabled selected class="bg-[#1a1a1a]">Select a residence</option>
+                            <option value="terrace" class="bg-[#1a1a1a]">Terrace Townhouse (Guzape)</option>
+                            <option value="extension" class="bg-[#1a1a1a]">Extension Detached (Gwarimpa)</option>
+                            <option value="creekside" class="bg-[#1a1a1a]">Creekside Duplex (Karasana)</option>
+                            <option value="celeste" class="bg-[#1a1a1a]">Celeste Suites (Guzape)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Message / special requests</label>
+                        <textarea rows="3" placeholder="Arrival dates, number of guests, etc." class="placeholder:text-white/20"></textarea>
+                    </div>
+
+                    <div class="pt-6 flex flex-col sm:flex-row gap-4 items-center justify-between">
+                        <button type="submit" class="submit-btn w-full sm:w-auto">Send message</button>
+                        <span class="text-[8px] uppercase tracking-widest opacity-20">we respect your privacy</span>
+                    </div>
+                </form>
+
+                <!-- direct booking note -->
+                <div class="mt-8 text-center text-white/20 text-[9px] uppercase border-t border-white/10 pt-6">
+                    <span>✨ instant booking also available via WhatsApp concierge</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- operating hours + extra touch (glass row) -->
+        <div class="grid md:grid-cols-3 gap-5 mt-20">
+            <div class="glass-panel rounded-2xl p-6 text-center">
+                <span class="text-gold text-2xl serif block mb-1">24/7</span>
+                <span class="text-[9px] uppercase tracking-widest opacity-40">concierge desk</span>
+            </div>
+            <div class="glass-panel rounded-2xl p-6 text-center">
+                <span class="text-gold text-2xl serif block mb-1">08:00 – 20:00</span>
+                <span class="text-[9px] uppercase tracking-widest opacity-40">viewing hours</span>
+            </div>
+            <div class="glass-panel rounded-2xl p-6 text-center">
+                <span class="text-gold text-2xl serif block mb-1">&lt; 2hrs</span>
+                <span class="text-[9px] uppercase tracking-widest opacity-40">avg. response</span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-[9px] uppercase tracking-[0.5em] opacity-20">Mya Homes & Suites Limited © 2026 · Abuja, Nigeria</p>
+    </footer>
+
+    <!-- scroll reveal (soft) -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('.serif', { delay: 150, distance: '30px', origin: 'bottom', duration: 700 });
+        ScrollReveal().reveal('.glass-panel', { delay: 200, distance: '30px', origin: 'bottom', duration: 800, interval: 70 });
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Mya Homes & Suites</title>
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent: #d4af37; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #0c0c0c; color: #fff; margin: 0; }
+        .serif { font-family: 'Cormorant Garamond', serif; }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #fff, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="w-full flex justify-between items-center px-6 md:px-12 py-8 z-50 absolute top-0">
+        <div class="text-lg tracking-[0.25em] font-light">MYA HOMES <span class="text-[#d4af37] font-bold">S</span></div>
+        <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.3em] opacity-60">
+            <a href="index.html" class="hover:text-[#d4af37] transition">Home</a>
+            <a href="Propeties.html" class="hover:text-[#d4af37] transition">Properties</a>
+            <a href="Contact.html" class="hover:text-[#d4af37] transition">Contact</a>
+        </div>
+        <a href="tel:+2349019238653" class="text-[10px] border border-white/30 px-5 py-2 rounded-full uppercase tracking-widest hover:bg-white hover:text-black transition">
+            Message Us
+        </a>
+    </nav>
+
+    <main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+        
+        <header class="mb-16">
+            <p class="text-[10px] uppercase tracking-[0.5em] mb-4 text-[#d4af37]">Our Story</p>
+            <h1 class="serif text-5xl md:text-7xl leading-tight">Crafting a New Standard <br> of <span class="gradient-text">Hospitality.</span></h1>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            
+            <div class="space-y-12">
+                <section>
+                    <h3 class="text-sm uppercase tracking-widest text-[#d4af37] mb-4">The Essence</h3>
+                    <p class="text-lg md:text-xl font-light leading-relaxed opacity-80">
+                        Mya Homes & Suites Limited was founded on the principle that luxury should be felt, not just seen. We provide a bridge between the privacy of a home and the world-class amenities of a luxury hotel.
+                    </p>
+                </section>
+
+                <section class="glass-panel p-8 rounded-3xl">
+                    <h3 class="text-sm uppercase tracking-widest mb-6 opacity-40">Our Pillars</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="serif text-2xl mb-2">Refined Privacy</h4>
+                            <p class="text-xs opacity-50">Our suites in Guzape and Gwarimpa are designed for those who value discretion and a quiet, secure environment.</p>
+                        </div>
+                        <div class="border-t border-white/10 pt-6">
+                            <h4 class="serif text-2xl mb-2">Exceptional Service</h4>
+                            <p class="text-xs opacity-50">From our top chefs at Celeste Suites to our 24-hour concierge support, we cater to your every need.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="relative group">
+                <div class="rounded-3xl overflow-hidden border border-white/10">
+                    <img src="pk (3).jpg" alt="Luxury Interior" class="w-full h-[500px] object-cover opacity-80 group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="absolute -bottom-6 -left-6 glass-panel p-6 rounded-2xl hidden md:block">
+                    <p class="serif text-3xl">Abuja, Nigeria</p>
+                    <p class="text-[10px] uppercase tracking-widest opacity-40">Established Excellence</p>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="mt-24 text-center py-20 border-t border-white/5">
+            <h2 class="serif text-4xl mb-8">Ready to experience refined living?</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="Propeties.html" class="bg-white text-black px-12 py-4 rounded-xl text-[10px] font-bold tracking-widest hover:bg-[#d4af37] transition">VIEW PROPERTIES</a>
+                <a href="Contact.html" class="border border-white/20 px-12 py-4 rounded-xl text-[10px] font-bold tracking-widest hover:bg-white/5 transition">GET IN TOUCH</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 px-6 border-t border-white/5 opacity-40 text-center">
+        <p class="text-[10px] tracking-[0.3em]">© 2026 MYA HOMES & SUITES LIMITED</p>
+    </footer>
+
+</body>
+</html>
